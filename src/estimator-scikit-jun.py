@@ -46,7 +46,7 @@ print(numeric_df.shape)
 
 # Impute
 X = numeric_df.values
-imp = pp.Imputer(missing_values='NaN', strategy='most_frequent', axis=0) # probably, median will be better
+imp = pp.Imputer(missing_values='NaN', strategy='median', axis=0) # probably, median will be better
 imp = imp.fit(X)
 X = imp.transform(X)
 print(X.shape)
